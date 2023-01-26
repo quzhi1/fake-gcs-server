@@ -15,4 +15,4 @@ RUN apk add --no-cache mailcap
 COPY --from=builder /code/fake-gcs-server /bin/fake-gcs-server
 RUN /bin/fake-gcs-server -h
 EXPOSE 4443
-ENTRYPOINT ["/bin/fake-gcs-server", "-data", "/data"]
+ENTRYPOINT ["/bin/fake-gcs-server", "-data", "/data", "-public-host", "localhost:4443"]
