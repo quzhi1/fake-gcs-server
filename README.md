@@ -110,6 +110,7 @@ docker build -t fsouza/fake-gcs-server .
 
 ### Zhi's note
 ```bash
+docker context use desktop-linux
 docker --context desktop-linux buildx create --use
 docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t quzhi65222714/fake-gcs-server:latest --push .
 ```
